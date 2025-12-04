@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h1>Contact USJM</h1>
+
+<form onsubmit="alert('Message sent!'); return false;">
+    <p>Name: <input type="text" id="name" required></p>
+    <p>Email: <input type="email" id="email" required></p>
+    <p>Message: <textarea id="message" required></textarea></p>
+    <button type="submit">Send Message</button>
+</form>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Form would be submitted in real application!');
+});
+</script>
+{% endblock %}

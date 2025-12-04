@@ -1,0 +1,110 @@
+{% extends 'main/base.html' %}
+
+{% block title %}About USJM{% endblock %}
+
+{% block content %}
+<h1 style="color: #003366; margin-bottom: 1rem; border-bottom: 3px solid #ff6600; padding-bottom: 0.5rem;">
+    <i class="fas fa-university"></i> About University of Saint Joseph Mbarara
+</h1>
+
+<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin: 2rem 0;">
+    <div>
+        <h2 style="color: #003366; margin-bottom: 1rem;">Our Mission</h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+            To provide quality higher education that promotes intellectual, spiritual, and moral 
+            development of students for service to humanity. We aim to equip graduates with 
+            knowledge, skills, and values necessary for personal and professional success.
+        </p>
+        
+        <h2 style="color: #003366; margin-bottom: 1rem;">Our Vision</h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+            To be a leading private university in Uganda and the East African region, 
+            recognized for academic excellence, innovative research, and transformative 
+            education that produces ethical leaders and responsible citizens.
+        </p>
+        
+        <h2 style="color: #003366; margin-bottom: 1rem;">Core Values</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                <i class="fas fa-check-circle" style="color: #28a745;"></i> Academic Excellence
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                <i class="fas fa-check-circle" style="color: #28a745;"></i> Integrity and Ethics
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                <i class="fas fa-check-circle" style="color: #28a745;"></i> Innovation and Creativity
+            </li>
+            <li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">
+                <i class="fas fa-check-circle" style="color: #28a745;"></i> Social Responsibility
+            </li>
+            <li style="padding: 0.5rem 0;">
+                <i class="fas fa-check-circle" style="color: #28a745;"></i> Diversity and Inclusion
+            </li>
+        </ul>
+    </div>
+    
+    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+        <h3 style="color: #003366; margin-bottom: 1rem;">Quick Facts</h3>
+        <div style="margin-bottom: 1.5rem;">
+            <p><strong><i class="fas fa-calendar-alt"></i> Established:</strong> 2011</p>
+            <p><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> Mbarara, Uganda</p>
+            <p><strong><i class="fas fa-users"></i> Student Body:</strong> 1,000+</p>
+            <p><strong><i class="fas fa-chalkboard-teacher"></i> Faculty:</strong> 50+</p>
+            <p><strong><i class="fas fa-building"></i> Campus:</strong> Urban, 5 acres</p>
+        </div>
+        
+        <h3 style="color: #003366; margin-bottom: 1rem;">Contact Information</h3>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> usj@usj.ac.ug</p>
+        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +256 772 123 456</p>
+        <p><i class="fas fa-globe"></i> <strong>Website:</strong> www.usj.ac.ug</p>
+        <p><i class="fas fa-map-pin"></i> <strong>Address:</strong> P.O. Box 2100, Mbarara, Uganda</p>
+    </div>
+</div>
+
+<!-- History Timeline -->
+<div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 2rem; border-radius: 10px; margin: 2rem 0;">
+    <h2 style="color: #003366; text-align: center; margin-bottom: 2rem;">
+        <i class="fas fa-history"></i> Our History
+    </h2>
+    
+    <div style="display: flex; flex-direction: column; gap: 1.5rem; position: relative;">
+        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #003366; transform: translateX(-50%);"></div>
+        
+        <div style="display: flex; align-items: center; position: relative;">
+            <div style="width: 50%; text-align: right; padding-right: 2rem;">
+                <h4 style="color: #003366;">2011</h4>
+                <p>University established with 3 departments</p>
+            </div>
+            <div style="width: 20px; height: 20px; background: #ff6600; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 3px #003366;"></div>
+            <div style="width: 50%; padding-left: 2rem;"></div>
+        </div>
+        
+        <div style="display: flex; align-items: center; position: relative;">
+            <div style="width: 50%; padding-right: 2rem;"></div>
+            <div style="width: 20px; height: 20px; background: #ff6600; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 3px #003366;"></div>
+            <div style="width: 50%; text-align: left; padding-left: 2rem;">
+                <h4 style="color: #003366;">2015</h4>
+                <p>Accreditation received from NCHE</p>
+            </div>
+        </div>
+        
+        <div style="display: flex; align-items: center; position: relative;">
+            <div style="width: 50%; text-align: right; padding-right: 2rem;">
+                <h4 style="color: #003366;">2020</h4>
+                <p>New campus buildings completed</p>
+            </div>
+            <div style="width: 20px; height: 20px; background: #ff6600; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 3px #003366;"></div>
+            <div style="width: 50%; padding-left: 2rem;"></div>
+        </div>
+        
+        <div style="display: flex; align-items: center; position: relative;">
+            <div style="width: 50%; padding-right: 2rem;"></div>
+            <div style="width: 20px; height: 20px; background: #ff6600; border-radius: 50%; border: 3px solid white; box-shadow: 0 0 0 3px #003366;"></div>
+            <div style="width: 50%; text-align: left; padding-left: 2rem;">
+                <h4 style="color: #003366;">2025</h4>
+                <p>6 departments with 1000+ students</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

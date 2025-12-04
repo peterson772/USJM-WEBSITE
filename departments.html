@@ -1,0 +1,67 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Departments - USJM{% endblock %}
+
+{% block content %}
+<h1 style="color: #003366; margin-bottom: 1rem; border-bottom: 3px solid #ff6600; padding-bottom: 0.5rem;">
+    <i class="fas fa-graduation-cap"></i> Academic Departments
+</h1>
+<p style="margin-bottom: 2rem;">Explore our diverse range of academic programs and departments.</p>
+
+<button class="btn toggle-btn" data-target="departmentsList" data-show="Show Departments" data-hide="Hide Departments" style="margin-bottom: 2rem;">
+    Hide Departments
+</button>
+
+<!-- Question 3b-iii: Departments loaded from database via Django ORM -->
+<div id="departmentsList" class="departments-container">
+    {% for department in departments %}
+    <div class="department-card">
+        <h3><i class="fas fa-book-open" style="color: #ff6600;"></i> {{ department.name }}</h3>
+        <p>{{ department.description }}</p>
+        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #eee;">
+            <small><i class="fas fa-clock"></i> Updated: Today</small>
+        </div>
+    </div>
+    {% empty %}
+    <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; background: #f8f9fa; border-radius: 10px;">
+        <i class="fas fa-exclamation-circle" style="font-size: 3rem; color: #ccc; margin-bottom: 1rem;"></i>
+        <h3>No Departments Available</h3>
+        <p>Departments will be listed here once added to the system.</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Department Statistics -->
+<div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+    <h3 style="color: #003366; margin-bottom: 1rem;">
+        <i class="fas fa-chart-bar"></i> Department Statistics
+    </h3>
+    <p>Total Departments: <strong>{{ departments|length }}</strong></p>
+    <div style="height: 10px; background: #e9ecef; border-radius: 5px; margin: 1rem 0; overflow: hidden;">
+        <div style="width: {% widthratio departments|length 6 100 %}%; height: 100%; background: linear-gradient(90deg, #003366, #006699);"></div>
+    </div>
+</div>
+
+<script>
+// Additional JavaScript for departments page
+document.addEventListener('DOMContentLoaded', function() {
+    // Add animation to department cards
+    const cards = document.querySelectorAll('.department-card');
+    cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+        card.classList.add('fade-in');
+    });
+});
+</script>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+</style>
+{% endblock %}

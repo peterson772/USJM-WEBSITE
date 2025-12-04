@@ -1,0 +1,74 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home - USJM{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h2>Welcome to University of Saint Joseph Mbarara</h2>
+    <p>Excellence in Education, Character and Service</p>
+    <a href="{% url 'departments' %}" class="btn">Explore Departments <i class="fas fa-arrow-right"></i></a>
+</div>
+
+<!-- Image Slider -->
+<div class="image-slider" style="margin: 2rem 0; border-radius: 10px; overflow: hidden; height: 400px;">
+    <div class="slide">
+        <div style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'); background-size: cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white;">
+            <div style="text-align: center; padding: 2rem;">
+                <h3 style="font-size: 2rem;">State-of-the-Art Campus</h3>
+                <p>Modern facilities for optimal learning experience</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <div style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80'); background-size: cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white;">
+            <div style="text-align: center; padding: 2rem;">
+                <h3 style="font-size: 2rem;">Advanced Laboratories</h3>
+                <p>Hands-on learning in fully equipped labs</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features-grid">
+    <div class="feature-card">
+        <i class="fas fa-user-graduate" style="font-size: 2.5rem; color: #003366; margin-bottom: 1rem;"></i>
+        <h3>For Students</h3>
+        <p>Access course materials, view grades, check schedules, and connect with lecturers.</p>
+    </div>
+    
+    <div class="feature-card">
+        <i class="fas fa-chalkboard-teacher" style="font-size: 2.5rem; color: #003366; margin-bottom: 1rem;"></i>
+        <h3>For Lecturers</h3>
+        <p>Upload course materials, manage student records, and schedule classes.</p>
+    </div>
+    
+    <div class="feature-card">
+        <i class="fas fa-users" style="font-size: 2.5rem; color: #003366; margin-bottom: 1rem;"></i>
+        <h3>For Guests</h3>
+        <p>Explore university programs, contact administration, and request information.</p>
+    </div>
+</div>
+
+<!-- Quick Stats -->
+<div style="background: #003366; color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+        <div>
+            <h3 style="font-size: 2rem; color: #ff6600;">6+</h3>
+            <p>Academic Departments</p>
+        </div>
+        <div>
+            <h3 style="font-size: 2rem; color: #ff6600;">50+</h3>
+            <p>Qualified Lecturers</p>
+        </div>
+        <div>
+            <h3 style="font-size: 2rem; color: #ff6600;">1000+</h3>
+            <p>Active Students</p>
+        </div>
+        <div>
+            <h3 style="font-size: 2rem; color: #ff6600;">12+</h3>
+            <p>Years of Excellence</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
